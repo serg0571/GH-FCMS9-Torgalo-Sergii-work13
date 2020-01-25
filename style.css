@@ -1,11 +1,21 @@
-.rForm{
+h1 {
+  font-size: 2px;
+  color: blue;
+}
+/*.rForm{
   max-width: 200px;
   padding: 15px;
   margin: 0 auto;
 }
-#placeButton{
+.placeButton{
+ text-align: center;
 
 }
+.but-btn{
+  background-color: blue;
+}*/
+
+/*
 .singForm{
   margin: 0 auto;
-}
+}*/

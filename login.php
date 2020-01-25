@@ -13,34 +13,17 @@
 <body>
 <?php
 require_once 'conn.php';
-/*isset ОПРЕДЕЛЯЕТ БЫЛА ЛИ ЗАНЕСЕНА ПЕРЕМЕННАЯ ОТЛИЧНАЯ ОТ НУЛ
-POST  ЭТО СУПЕРГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ , кот содержит список  ПЕРЕМЕННЫХ ПЕРЕДАННЫХ СКРИПТУ
-С ПОМОЗЬЮ $_POST ИЫ МОЖЕМ ПОЛУЧИТЬ ДАННЫЕ ИЗ ФОРМЫ ДЛЯ ДАЛЬНЕЙШНГО ИСПОЛЬЗОВАНИЯ */
 if (isset($_POST['usernameR']) && isset($_POST['passwordR'])) {
-    /* СОЗДАЕМ ПРЕМЕННУЮ КОТ БУДЕТ ХРАНИТЬ ЗНАЧЕНИЕ ПЕРЕДАННОЕ МЗ МЕТОДА $_POST*/
+
     $username = $_POST['usernameR'];
     $password = $_POST['passwordR'];
-
-    /* ПЕРЕДАЕМ ЗАПРОС В БАЗУ ДАННЫХ
-    INSERT INTO ПОИОГАЕТ ВНЕСТИ ДАННЫЕ В ТАБЛИЦУ
-    users НАЗВАНИЕ ТАБЛИЦЫ
-    и пишем те значения кот надо ввести
-    VALUES передает сами значения*/
-    /*$sql = "SELECT id, title, body FROM users";
-        echo '<pre>';
-        var_dump($sql);
-        echo '<pre>';
-        exit();*/
-
-//    if ($password === $passwordRep) {
+ //    if ($password === $passwordRep) {
 
     $sql = "INSERT INTO users_sign(username,  password)VALUES('$username', '$password')";
-
 
     $result = mysqli_query($conn, $sql);
 //    }
 
-    /*  ВЫВОДИМ ИНФО ПРИ ПОМОЩИ  alert*/
     if ($result) {
         $message = "successful";
     } else {
@@ -72,9 +55,11 @@ if (isset($_POST['usernameR']) && isset($_POST['passwordR'])) {
             <button class="btn btn-lg btn-primary btn-block" type="submit"> Sign in</button>
         </label>
     </form>
+    <div id="placeButton" >
     <a href="index.php" >
-        <button type="button" class="btn btn-primary" id="placeButton">Registration</button>
+        <button type="button" class="btn btn-primary">Registration</button>
     </a>
+    </div>
 </div>
 </body>
 </html>
