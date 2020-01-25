@@ -7,8 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet"  type="text/css" href="style.css" >-->
     <title>login</title>
+    <style type="text/css">
+        h1 {color:blue; font-size: 20px;}
+        input {
+            display: flex;
+            margin-top: 3px;
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -55,11 +62,11 @@ if (isset($_POST['usernameR']) && isset($_POST['passwordR'])) {
             <button class="btn btn-lg btn-primary btn-block" type="submit"> Sign in</button>
         </label>
     </form>
-    <div id="placeButton" >
+
     <a href="index.php" >
         <button type="button" class="btn btn-primary">Registration</button>
     </a>
-    </div>
+
 </div>
 </body>
 </html>
