@@ -5,15 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    <link rel="stylesheet"  type="text/css" href="style.css" >-->
+    <!--    <link rel="stylesheet"  type="text/css" href="style.css" >-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style type="text/css">
-        h1 {color:blue; font-size: 20px;}
-input {
-    display: flex;
-    margin: 5px 0;
-}
+        h1 {
+            color: blue;
+            font-size: 20px;
+        }
+
+        input {
+            display: flex;
+            margin: 5px 0;
+        }
     </style>
     <title>Registration</title>
 
@@ -32,19 +36,19 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $age = $_POST['age'];
     $gender = $_POST['gender'];
 
-        $sql = "INSERT INTO users (username, email, password, password_r, first_name, last_name, age, gender)
+    $sql = "INSERT INTO users (username, email, password, password_r, first_name, last_name, age, gender)
      VALUES('$username', '$email', '$password', '$passwordRep', '$firstName', '$lastName', '$age', '$gender')";
 
-        $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        $message = " successfool";
+        $message = " successful";
     } else {
-        $messageFalls = "falls333";
+        $messageFalls = "falls";
     }
 }
 ?>
-<div class="container" >
+<div class="container">
     <form class="rForm" method="post">
         <h1>Registration</h1>
         <?php
@@ -73,9 +77,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             <button class="btn btn-lg btn-primary " type="submit"> Registration</button>
         </label>
     </form>
-<div class="placeButton">
-    <a href="login.php" > <button class="btn btn-lg btn-primary " type="submit">Sign in</button></a>
-</div>
+    <div class="placeButton">
+        <a href="login.php">
+            <button class="btn btn-lg btn-primary " type="submit">Sign in</button>
+        </a>
+    </div>
 </div>
 
 

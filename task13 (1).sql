@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 25 2020 г., 01:32
+-- Время создания: Янв 25 2020 г., 15:00
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -48,28 +48,9 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `password_r`, `
 (1, '10', '10', '10', '10', '10', '10', 10, '10'),
 (8, 'sdrfgh', 'zsdfg@sdf', 'sdfdgf', 'dsfg', 'dsfg', 'dsfg', 123, 'sdf'),
 (10, 'aswefrga', 'EDAFS@dfg', 'dwaeFSR', 'DEAFSA', 'DAEFSA', 'DEAFSA', 123, 'DEAFRSA'),
-(12, 'cdsafsgd', 'faesrgad@dsafsg', 'sdaFf', 'fdsadg', 'fdsgdx', 'fdsgdz', 1234, 'dvsfdx');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `users_sign`
---
-
-CREATE TABLE `users_sign` (
-  `users_id` int(250) NOT NULL,
-  `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Дамп данных таблицы `users_sign`
---
-
-INSERT INTO `users_sign` (`users_id`, `username`, `password`) VALUES
-(1, '$username', '$password'),
-(2, '13', '22'),
-(3, 'asdf', 'sdfg');
+(12, 'cdsafsgd', 'faesrgad@dsafsg', 'sdaFf', 'fdsadg', 'fdsgdx', 'fdsgdz', 1234, 'dvsfdx'),
+(13, 'sdfg', 'sdf@dfgh', '23erftg', '234rt', 'sdfg', 'xdcfvb', 234, 'zsdf'),
+(14, 'www', 'e@e', '11', '11', 'aa', 'ss', 11, 'ss');
 
 --
 -- Индексы сохранённых таблиц
@@ -83,13 +64,6 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `name` (`username`);
 
 --
--- Индексы таблицы `users_sign`
---
-ALTER TABLE `users_sign`
-  ADD PRIMARY KEY (`users_id`),
-  ADD UNIQUE KEY `users_name` (`username`);
-
---
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -97,13 +71,7 @@ ALTER TABLE `users_sign`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT для таблицы `users_sign`
---
-ALTER TABLE `users_sign`
-  MODIFY `users_id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
