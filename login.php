@@ -13,7 +13,7 @@
         h1 {color:blue; font-size: 20px;}
         input {
             display: flex;
-            margin-top: 3px;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -59,12 +59,12 @@ if (isset($_POST['usernameR']) && isset($_POST['passwordR'])) {
         <label>
             <input type="text" name="usernameR" placeholder="Name" required>
             <input type="password" name="passwordR" placeholder="password" required>
-            <button class="btn btn-lg btn-primary btn-block" type="submit"> Sign in</button>
+            <button class="btn btn-lg btn-primary " type="submit"> Sign in</button>
         </label>
     </form>
 
     <a href="index.php" >
-        <button type="button" class="btn btn-primary">Registration</button>
+        <button class="btn btn-lg btn-primary " type="submit">Registration</button>
     </a>
 
 </div>
